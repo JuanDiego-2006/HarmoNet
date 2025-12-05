@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paso 2: Ingresar Código</title>
+    <link rel="stylesheet" href="/estilos/RecuperarContraseña.css">
+</head>
+<body>
+    <div class="background-container">
+        <div class="form-card">
+            <img src="/Imagenes/logo-harmonet.png" alt="HarmoNet Logo" class="logo">
+            <h1>HarmoNet</h1>
+            
+            <div id="step2" class="form-step active">
+                <p>Ingresa código de recuperación:</p>
+                <form id="formStep2">
+                    <div class="input-group">
+                        <input type="text" id="code" placeholder="Código de 6 dígitos" required>
+                    </div>
+                    <button type="submit" class="btn confirm-btn">Confirmar código</button>
+                    <a href="RecuperarContraseña.html" class="back-link back-to-step1">← Volver a enviar correo</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="/Js/RC.js"></script>
+</body>
+</html>

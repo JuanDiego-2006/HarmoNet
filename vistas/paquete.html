@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HarmoNet - Vista de Eventos</title>
+    <link rel="stylesheet" href="/estilos/paquete.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="/Imagenes/logo-harmonet.png" alt="Logo HarmoNet" class="logo-icon">
+            <span>HarmoNet</span>
+        </div>
+        <nav class="menuMusico"> 
+            <a href="../index.html">Inicio</a>
+            <a href="#">Paquete</a>
+            <a href="Notificaciones.html">Notificaciones</a>
+        </nav>
+        <div class="user-profile">
+            <a href="menuMusico.html">Volver a Perfil</a> 
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="event-list">
+            
+           
+        </div>
+
+        <div class="sidebar-scroll">
+            <i class="fas fa-arrow-up"></i>
+            <div class="scroll-bar">
+                <div class="scroll-thumb"></div>
+            </div>
+            <i class="fas fa-arrow-down"></i>
+        </div>
+    </div>
+
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3 id="modalTitle">Confirmación</h3>
+            <p id="modalMessage">¿Estás seguro de que quieres realizar esta acción?</p>
+            <div class="modal-actions">
+                <button id="confirmBtn" class="confirm-btn">Sí</button>
+                <button id="cancelBtn" class="cancel-btn">No, Cancelar</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>✏️ Editar Paquete</h3>
+            <form id="editForm">
+                
+                <label for="editPackageTitle">Título del Paquete (Nombre):</label>
+                <input type="text" id="editPackageTitle" name="editPackageTitle" required>
+                
+                <label for="editPackageDescription">Descripción:</label>
+                <textarea id="editPackageDescription" name="editPackageDescription"></textarea>
+                
+                <label for="editPackageDuration">Duración (Unidad de Tiempo, ej: por hora):</label>
+                <input type="text" id="editPackageDuration" name="editPackageDuration" required>
+
+                <label for="editPackagePrice">Precio ($):</label>
+                <input type="number" id="editPackagePrice" name="editPackagePrice" min="0" step="1" required>
+
+                <label for="editPackageMusicians">Cantidad de Músicos:</label>
+                <input type="number" id="editPackageMusicians" name="editPackageMusicians" min="1" required>
+
+                <label for="editPackageImage">Cambiar Imagen del Paquete:</label>
+                <input type="file" id="editPackageImage" name="editPackageImage" accept="image/*">
+                
+                <div class="modal-actions">
+                    <button type="submit" class="confirm-btn">Guardar Cambios</button>
+                    <button type="button" id="editCancelBtn" class="cancel-btn">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="/Js/paquete.js"></script>
+</body>
+</html>

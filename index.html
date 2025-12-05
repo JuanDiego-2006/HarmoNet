@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HarmoNet - La música para tu evento</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inria+Serif:wght@300;400;700&family=Inter:wght@400;500;600&family=Abyssinica+SIL&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/estilos/estilos.css">
+</head>
+
+<body>
+
+    <header class="header sticky-header">
+        <div class="logo">
+            <div class="logo-icon">
+                <img src="/Imagenes/logo-harmonet.png" alt="HarmoNet Logo">
+            </div>
+            <h1 class="logo-text">HarmoNet</h1>
+        </div>
+
+        <button class="filter-toggle-btn desktop-only" id="filterToggleBtn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M3 6h18M3 12h18M3 18h18" stroke="white" stroke-width="2" stroke-linecap="round" />
+            </svg>
+            <span>Filtros</span>
+        </button>
+
+        <div class="search-bar">
+            <div class="search-border" id="searchBorder">
+                <div class="search-content">
+                    <svg class="search-icon" viewBox="0 0 25 23" fill="none">
+                        <path
+                            d="M17.9063 14.8332L24.631 21.0201C24.8674 21.2377 25.0001 21.5328 25 21.8404C24.9999 22.1481 24.8669 22.4431 24.6304 22.6605C24.3939 22.878 24.0731 23.0001 23.7388 23C23.4044 22.9999 23.0837 22.8776 22.8474 22.66L16.1227 16.4731C14.1124 17.9056 11.5845 18.5797 9.05317 18.3583C6.52185 18.1369 4.17728 17.0366 2.49642 15.2813C0.815558 13.5259 -0.0753278 11.2474 0.00499517 8.90919C0.0853182 6.57098 1.13082 4.34875 2.9288 2.69456C4.72679 1.04038 7.1422 0.0784947 9.68366 0.00459567C12.2251 -0.0693033 14.7017 0.750332 16.6097 2.29676C18.5176 3.84319 19.7135 6.00025 19.9542 8.32912C20.1948 10.658 19.4621 12.9837 17.9051 14.8332M10.0005 16.0994C11.9895 16.0994 13.8971 15.3724 15.3035 14.0784C16.71 12.7845 17.5001 11.0295 17.5001 9.19951C17.5001 7.36955 16.71 5.61455 15.3035 4.32058C13.8971 3.0266 11.9895 2.29966 10.0005 2.29966C8.01143 2.29966 6.10387 3.0266 4.69741 4.32058C3.29095 5.61455 2.50081 7.36955 2.50081 9.19951C2.50081 11.0295 3.29095 12.7845 4.69741 14.0784C6.10387 15.3724 8.01143 16.0994 10.0005 16.0994Z"
+                            fill="white" />
+                    </svg>
+                    <input type="text" placeholder="Buscar musico, agrupación y mas..." class="search-input"
+                        id="searchInput">
+                </div>
+            </div>
+        </div>
+
+        <div class="user-section">
+            <svg class="bell-icon" viewBox="0 0 36 45" fill="none">
+                <path
+                    d="M24.4794 6.41925C24.7418 5.41883 25.2702 4.5116 26.0062 3.79744C26.7422 3.08329 27.6573 2.58991 28.6509 2.37162C29.6444 2.15334 30.6778 2.21861 31.6372 2.56026C32.5967 2.90191 33.445 3.50668 34.0888 4.30799C34.7326 5.1093 35.1469 6.07607 35.2861 7.10186C35.4253 8.12766 35.2839 9.17269 34.8776 10.1219C34.4714 11.0711 33.8159 11.8877 32.9834 12.4817C32.1509 13.0758 31.1736 13.4242 30.1592 13.4887C30.6619 14.9376 30.918 16.4633 30.9167 18V31.5H33.125C34.3396 31.5 35.3333 32.5125 35.3333 33.75C35.3333 34.9875 34.3396 36 33.125 36H24.2917V38.25C24.2917 40.0402 23.5937 41.7571 22.3512 43.023C21.1088 44.2888 19.4237 45 17.6667 45C15.9096 45 14.2245 44.2888 12.9821 43.023C11.7397 41.7571 11.0417 40.0402 11.0417 38.25V36H2.20833C0.99375 36 0 34.9875 0 33.75C0 32.5125 0.99375 31.5 2.20833 31.5H4.41667V18C4.41619 14.8093 5.5249 11.7216 7.54616 9.28451C9.56741 6.84743 12.3705 5.21853 15.4583 4.68675V2.25C15.4583 1.65326 15.691 1.08097 16.1051 0.65901C16.5193 0.237053 17.081 0 17.6667 0C18.2524 0 18.8141 0.237053 19.2282 0.65901C19.6423 1.08097 19.875 1.65326 19.875 2.25V4.68675C21.5023 4.96705 23.0639 5.55462 24.4794 6.41925ZM17.6667 40.5C18.2524 40.5 18.8141 40.2629 19.2282 39.841C19.6423 39.419 19.875 38.8467 19.875 38.25V36H15.4583V38.25C15.4583 38.8467 15.691 39.419 16.1051 39.841C16.5193 40.2629 17.081 40.5 17.6667 40.5ZM8.83333 31.5H26.5V18C26.5 15.6131 25.5693 13.3239 23.9128 11.636C22.2562 9.94821 20.0094 9 17.6667 9C15.3239 9 13.0771 9.94821 11.4206 11.636C9.76398 13.3239 8.83333 15.6131 8.83333 18V31.5Z"
+                    fill="url(#paint0_linear_bell)" />
+                <defs>
+                    <linearGradient id="paint0_linear_bell" x1="17.6691" x2="17.6691" y1="0" y2="45"
+                        gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FF0000" />
+                        <stop offset="1" stop-color="#D946EF" />
+                    </linearGradient>
+                </defs>
+            </svg>
+
+            <div class="user-profile">
+                <svg class="user-icon" viewBox="0 0 64 64" fill="none">
+                    <path
+                        d="M32 32C29.171 32 26.4579 30.8762 24.4575 28.8758C22.4571 26.8754 21.3333 24.1623 21.3333 21.3333C21.3333 18.5044 22.4571 15.7912 24.4575 13.7909C26.4579 11.7905 29.171 10.6667 32 10.6667C34.829 10.6667 37.5421 11.7905 39.5425 13.7909C41.5429 15.7912 42.6667 18.5044 42.6667 21.3333C42.6667 24.1623 41.5429 26.8754 39.5425 28.8758C37.5421 30.8762 34.829 32 32 32ZM32 40C40.496 40 48.12 41.5227 53.3333 48.168V53.3333H10.6667V48.168C15.88 41.52 23.504 40 32 40Z"
+                        fill="url(#paint0_linear_user)" />
+                    <defs>
+                        <linearGradient id="paint0_linear_user" x1="11.0002" x2="53.0002" y1="27" y2="43.5"
+                            gradientUnits="userSpaceOnUse">
+                            <stop stop-color="#FF0000" />
+                            <stop offset="1" stop-color="#D946EF" />
+                        </linearGradient>
+                    </defs>
+                </svg>
+                <p class="user-text">Usuario</p>
+            </div>
+        </div>
+    </header>
+
+    <button class="filter-toggle-btn mobile-only" id="filterToggleBtnMobile">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M3 6h18M3 12h18M3 18h18" stroke="white" stroke-width="2" stroke-linecap="round" />
+        </svg>
+        <span>Filtros</span>
+    </button>
+
+    <main class="main-content">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <h3>Filtros</h3>
+                <button class="close-filters" id="closeFilters">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                        <path d="M18 6L6 18M6 6l12 12" stroke="white" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+
+            <div class="filter-section">
+                <h4>Género Musical</h4>
+                <div class="checkbox-group" id="genreFilterContainer">
+                    <p style="color: #aaa; font-size: 0.9em;">Cargando géneros...</p>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h4>Ubicación</h4>
+                <select class="filter-select" id="locationFilter">
+                    <option value="">Todas las ubicaciones</option>
+                    <option value="tuxtla">Tuxtla Gutierrez</option>
+                    <option value="chiapas">Chiapas</option>
+                    <option value="cdmx">Ciudad de México</option>
+                    <option value="guadalajara">Guadalajara</option>
+                </select>
+            </div>
+
+            <div class="filter-section">
+                <h4>Precio</h4>
+                <div class="price-inputs">
+                    <div class="price-input-group">
+                        <label>Mínimo</label>
+                        <input type="number" class="price-input" id="minPrice" placeholder="$500" value="500">
+                    </div>
+                    <div class="price-input-group">
+                        <label>Máximo</label>
+                        <input type="number" class="price-input" id="maxPrice" placeholder="$10,000" value="10000">
+                    </div>
+                </div>
+            </div>
+
+            <div class="filter-section">
+                <h4>Calificación Mínima</h4>
+                <select class="filter-select" id="ratingFilter">
+                    <option value="">Todas</option>
+                    <option value="5">⭐ 5.0</option>
+                    <option value="4.5">⭐ 4.5+</option>
+                    <option value="4">⭐ 4.0+</option>
+                    <option value="3.5">⭐ 3.5+</option>
+                    <option value="3">⭐ 3.0+</option>
+                </select>
+            </div>
+        </aside>
+
+        <div class="overlay" id="overlay"></div>
+
+        <section class="hero">
+            <h2 class="hero-title">La música para tu evento</h2>
+            <p class="hero-description">
+                Conecta con los mejores músicos y artistas profesionales. Encuentra el talento perfecto para<br>
+                hacer de tu evento una experiencia inolvidable.
+            </p>
+        </section>
+
+        <section class="stats">
+            <div class="stat-item">
+                <p class="stat-number">500 +</p>
+                <p class="stat-label">MUSICOS</p>
+            </div>
+            <div class="stat-item">
+                <p class="stat-number">1200 +</p>
+                <p class="stat-label">EVENTOS</p>
+            </div>
+            <div class="stat-item">
+                <p class="stat-number">4.9</p>
+                <p class="stat-label">CALIFICACION</p>
+            </div>
+        </section>
+
+        <section class="cards-section" id="cardsSection">
+        </section>
+
+        <div class="no-results" id="noResults">
+            No se encontraron músicos que coincidan con tu búsqueda
+        </div>
+    </main>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <img src="" alt="Músico" class="modal-image" id="modalImage">
+                <div class="modal-header-info">
+                    <h2 class="modal-title" id="modalTitle">DJ para eventos</h2>
+                    <div class="modal-tags" id="modalTags">
+                        <span class="modal-tag">DJ</span>
+                        <span class="modal-tag">Pop</span>
+                    </div>
+                    <div>
+                        <span class="modal-price" id="modalPrice">$2000</span>
+                        <span class="modal-price-label">por hora</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-section">
+                <h3 class="modal-section-title">Descripción detallada</h3>
+                <p class="modal-description" id="modalDescription">
+                    Este paquete incluye la presentación del DJ con equipo profesional, luces ambientales y selección de
+                    música adaptada a tu tipo de evento (bodas, fiestas, conferencias, etc.). Se ofrece también la
+                    posibilidad de personalizar la lista musical según las preferencias del cliente.
+                </p>
+            </div>
+
+            <div class="modal-section">
+                <h3 class="modal-section-title">Opiniones</h3>
+                <div class="modal-reviews">
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="review-stars">
+                                <span class="review-star">★</span>
+                                <span class="review-star">★</span>
+                                <span class="review-star">★</span>
+                                <span class="review-star">★</span>
+                                <span class="review-star">★</span>
+                            </div>
+                            <span class="review-author">María</span>
+                        </div>
+                        <p class="review-text">"Excelente ambiente y muy profesional. Todos mis invitados quedaron
+                            encantados."</p>
+                    </div>
+                    <div class="review-item">
+                        <div class="review-header">
+                            <div class="review-stars">
+                                <span class="review-star">★</span>
+                                <span class="review-star">★</span>
+                                <span class="review-star">★</span>
+                                <span class="review-star">★</span>
+                                <span class="review-star">★</span>
+                            </div>
+                            <span class="review-author">Carlos</span>
+                        </div>
+                        <p class="review-text">"Increíble servicio, superó todas mis expectativas. Lo recomendaría sin
+                            dudarlo."</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn-modal-back" id="btnModalBack">Volver</button>
+                <a href="FormularioCot.html" class="btn-modal-cotizar-link">Hacer cotización</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="success-alert-overlay" id="successAlert">
+        <div class="success-alert">
+            <div class="success-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M20 6L9 17L4 12" stroke="#000" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+            <p class="success-message">Tu cotización fue enviada<br>al músico</p>
+        </div>
+    </div>
+
+    <div class="musician-prompt-overlay" id="musicianPromptOverlay">
+        <div class="musician-prompt-content">
+            <h3 class="prompt-title">¡Únete a HarmoNet! 🎶</h3>
+            <p class="prompt-message">
+                ¿Te gustaría unirte a nuestra plataforma como **músico profesional**?<br>
+                ¡Regístrate ahora y empieza a ofrecer tus servicios!
+            </p>
+            <div class="prompt-actions">
+                <button class="btn-prompt-no" id="btnPromptNo">Ahora no</button>
+                <a href="menuMusico.html" class="btn-prompt-yes" id="btnPromptYes">Sí, quiero unirme</a>
+            </div>
+            <button class="prompt-close-btn" id="promptCloseBtn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                    <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <div class="modal-overlay hidden" id="modal-usuario-perfil-cliente"
+        style="background-color: rgba(0, 0, 0, 0.7); backdrop-filter: none; z-index: 1000;">
+        <div class="modal-content"
+            style="background-color: #1e1e1e; border: 2px solid #9d00ff; box-shadow: 0 0 20px rgba(157, 0, 255, 0.5); max-width: 400px;">
+            <button class="close-filters" id="modal-usuario-cerrar-cliente"
+                style="position: absolute; top: 10px; right: 15px; font-size: 2rem; color: #aaa; border: none;">&times;</button>
+            <h3 class="modal-title" style="color: #ff0055; font-size: 1.5rem; text-align: center;">Mi Cuenta</h3>
+            <div class="modal-user-info" style="margin-top: 25px; text-align: left; padding: 0 20px;">
+                <p style="color: #fff; margin-bottom: 10px;"><strong style="color: #aaa;">Nombre:</strong> <span
+                        id="modal-nombre-usuario-cliente">Cargando...</span></p>
+                <p style="color: #fff; margin-bottom: 10px;"><strong style="color: #aaa;">Email:</strong> <span
+                        id="modal-email-usuario-cliente">Cargando...</span></p>
+                <p style="color: #fff; margin-bottom: 10px;"><strong style="color: #aaa;">Tipo:</strong> <span
+                        id="modal-tipo-usuario-cliente">Cliente</span></p>
+            </div>
+            <a href="vistas/regitro.html" class="btn-modal-cotizar-link" id="logout-btn-cliente"
+                style="width: 100%; margin-top: 20px; display: block; box-sizing: border-box;"
+                onclick="localStorage.removeItem('hermonetUser');">Cerrar Sesión</a>
+        </div>
+    </div>
+
+    <script src="/Js/index.js"></script>
+</body>
+
+</html>

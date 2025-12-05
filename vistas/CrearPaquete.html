@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creación de Paquetes</title>
+    <link rel="stylesheet" href="/estilos/CrearPaquete.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="background-overlay"></div>
+
+    <nav class="navbar">
+        <div class="navbar-brand">
+            <img src="/Imagenes/logo-harmonet.png" alt="Logo HarmoNet" class="navbar-logo">
+            <span class="navbar-title">HarmoNet</span>
+        </div>
+        <button class="btn-volver-perfil">Volver al Perfil</button>
+    </nav>
+    <div class="navbar-bottom-line"></div>
+
+    <div class="contenedor-principal">
+        <div class="contenedor-formulario">
+            <h1 class="titulo-formulario">Crear Paquete</h1>
+
+            <form id="formCrearPaquete">
+
+                <div class="campo-group">
+                    <label for="nombre">Nombre del Paquete</label>
+                    <div class="input-con-icono">
+                        <i class="ri-file-list-3-line"></i>
+                        <input type="text" id="nombre" name="nombre" placeholder="Nombre del paquete" required>
+                    </div>
+                </div>
+
+                <div class="campo-group">
+                    <label for="elementos">Elementos Incluidos</label>
+                    <div class="input-con-icono">
+                        <i class="ri-box-3-line"></i>
+                        <input type="text" id="elementos" name="elementos" placeholder="Ej: Audio, Luces, Transporte..."
+                            required>
+                    </div>
+                </div>
+
+                <div class="campo-group">
+                    <label for="duracion">Duracion</label>
+                    <div class="input-con-icono">
+                        <i class="ri-time-line"></i>
+                        <select id="duracion" name="duracion" required>
+                            <option value="" disabled selected>Duracion del evento</option>
+                            <option value="1h">1 Hora</option>
+                            <option value="2h">3 Horas</option>
+                            <option value="3h">5 Horas</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="campo-group">
+                    <label for="precio">Precio</label>
+                    <div class="input-con-icono">
+                        <span class="simbolo-precio">$</span>
+                        <input type="text" id="precio" name="precio" placeholder="0.00" required>
+                    </div>
+                </div>
+
+                <div class="campo-group descripcion-grande">
+                    <label for="descripcion">Descripcion</label>
+                    <div class="input-con-icono input-textarea">
+                        <textarea id="descripcion" name="descripcion"
+                            placeholder="Describe el paquete (mínimo 50 caracteres)" rows="5" required
+                            minlength="50"></textarea>
+                    </div>
+                </div>
+
+                <button type="submit" class="btn-guardar">GUARDAR PAQUETE</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="modalExito" class="modal">
+        <div class="modal-content exito">
+            <i class="ri-check-line"></i>
+            <h2>Paquete Guardado</h2>
+            <button class="btn-cerrar-modal" style="display:none;">Cerrar</button>
+        </div>
+    </div>
+
+    <div id="modalError" class="modal">
+        <div class="modal-content error">
+            <i class="ri-close-line"></i>
+            <h2>Error al Crear Paquete</h2>
+            <p>Hubo un problema al intentar guardar el paquete. Inténtalo de nuevo.</p>
+            <button class="btn-cerrar-modal">Entendido</button>
+        </div>
+    </div>
+
+    <script src="../Js/CrearPaquete.js"></script>
+</body>
+
+</html>

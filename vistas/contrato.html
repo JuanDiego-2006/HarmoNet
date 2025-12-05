@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contrato de Servicio</title>
+  <link rel="stylesheet" href="/estilos/contrato.css"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-buttons" style="margin-left: auto;">
+      <button onclick="window.print()" class="btn-volver">
+        <i class="fas fa-print"></i> Imprimir Contrato
+      </button>
+    </div>
+  </header>
+
+  <div class="contrato-container">
+    <div class="contrato-card">
+        <div class="contrato-header-title">
+            <h1>CONTRATO DE PRESTACIÓN DE SERVICIOS</h1>
+            <p id="headerMusicoNombre">GRUPO MUSICAL</p> 
+            <p>Contrato Folio: #<span id="folioContrato">000</span></p>
+        </div>
+
+        <div class="seccion">
+            <p>
+                En <span id="ciudadFirma">Chiapas</span>, a 
+                <span class="linea-relleno" id="diaFirma"></span> de 
+                <span class="linea-relleno" id="mesFirma" style="min-width: 150px;"></span> de 
+                <span class="linea-relleno" id="anioFirma"></span>.
+            </p>
+            <p>
+                El Cliente: <span class="linea-relleno" id="nombreCliente" style="min-width: 350px;"></span>
+                N. Telefónico: <span class="linea-relleno" id="telefonoCliente" style="min-width: 200px;"></span>
+            </p>
+        </div>
+
+        <div class="seccion">
+            <p class="titulo-servicio" style="font-weight: bold;">
+                Contrata al artista/grupo: <span id="nombreMusicoBody"></span>
+            </p>
+            <p>
+                Duración: <span class="linea-relleno" id="duracionHoras"></span> Horas.
+                <br>
+                Comenzando: <span class="linea-relleno" id="horaInicio"></span>
+                Terminando: <span class="linea-relleno" id="horaFin"></span>
+            </p>
+            <p>
+                Que se llevará a cabo el día: 
+                <span class="linea-relleno" id="diaEvento"></span> de 
+                <span class="linea-relleno" id="mesEvento" style="min-width: 150px;"></span> de 
+                <span class="linea-relleno" id="anioEvento"></span>
+            </p>
+            <p>
+                En el lugar: <span class="linea-relleno" id="direccionEvento" style="min-width: 80%;"></span>
+            </p>
+        </div>
+
+        <hr style="border: 0; border-top: 1px dashed #ccc; margin: 30px 0;">
+
+        <div class="seccion">
+            <p>
+                Precio total del servicio: $ <span class="linea-relleno" id="montoTotal" style="min-width: 200px;"></span>
+            </p>
+            <p>
+                Letras: <span class="linea-relleno" id="montoTotalLetras" style="min-width: 80%;"></span>
+            </p>
+        </div>
+
+        <div class="seccion">
+            <p>
+                Anticipo recibido: $ <span class="linea-relleno" id="montoAnticipo" style="min-width: 200px;"></span>
+            </p>
+            <p>
+                Letras: <span class="linea-relleno" id="montoAnticipoLetras" style="min-width: 80%;"></span>
+            </p>
+        </div>
+
+        <div class="seccion">
+            <p>
+                Restante a liquidar: $ <span class="linea-relleno" id="montoRestante" style="min-width: 200px;"></span>
+            </p>
+            <p>
+                Letras: <span class="linea-relleno" id="montoRestanteLetras" style="min-width: 80%;"></span>
+            </p>
+        </div>
+
+        <div class="seccion-legal">
+            <p style="font-weight: bold; color: var(--color-texto-claro);">Condiciones:</p>
+            <p>La cuenta deberá ser liquidada al finalizar el servicio o según lo acordado. En caso de cancelación por parte del cliente con menos de 24 horas, no se reembolsará el anticipo.</p>
+        </div>
+
+        <div class="seccion-firmas">
+            <div class="firma">
+                <div class="linea-firma"></div>
+                <span id="firmaMusico">Representante</span>
+            </div>
+            <div class="firma">
+                <div class="linea-firma"></div>
+                <span id="firmaCliente">Interesado</span>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <script src="/Js/contrato.js"></script>
+</body>
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HarmoNet - Formulario de Cotización</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inika:wght@400;700&family=Inria+Serif:wght@300;400;700&family=Inter:wght@400;500;600&family=Abyssinica+SIL&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="/estilos/estilos.css">
+    <link rel="stylesheet" href="/estilos/FormularioCot.css">
+</head>
+
+<body class="cotizacion-body">
+
+    <main class="main-content-cotizacion">
+        <div class="cotizacion-card">
+            <h1 class="cotizacion-title">Solicitar Cotización</h1>
+            <form id="quoteForm" class="cotizacion-form">
+
+                <div class="form-group">
+                    <label for="paqueteSelect">Selecciona un Paquete (Opcional):</label>
+                    <select id="paqueteSelect" name="paqueteSelect">
+                        <option value="">Cargando paquetes...</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="clientName">Nombre de Contacto:</label>
+                    <input type="text" id="clientName" name="clientName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="clientPhone">Teléfono de Contacto:</label>
+                    <input type="tel" id="clientPhone" name="clientPhone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contactEmail">Correo Electrónico de Contacto:</label>
+                    <input type="email" id="contactEmail" name="contactEmail" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventDate">Fecha del Evento:</label>
+                    <input type="date" id="eventDate" name="eventDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventTime">Hora de Inicio:</label>
+                    <input type="time" id="eventTime" name="eventTime" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="duration">Duración Estimada (horas):</label>
+                    <input type="number" id="duration" name="duration" min="1" max="12" value="3" required readonly
+                        style="background-color: #333; cursor: not-allowed;">
+                </div>
+
+                <div class="form-group">
+                    <label for="ciudadSelect">Lugar del Evento (Ciudad):</label>
+                    <select id="ciudadSelect" name="ciudadSelect" required>
+                        <option value="">Cargando ciudades...</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="eventAddress">Dirección Exacta / Salón:</label>
+                    <input type="text" id="eventAddress" name="eventAddress"
+                        placeholder="Ej: Salón Los Candiles, Calle 5 de Mayo #123" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="details">Detalles Adicionales:</label>
+                    <textarea id="details" name="details" rows="4"
+                        placeholder="Menciona el repertorio deseado, requisitos de equipo, o cualquier otra especificación."></textarea>
+                </div>
+
+                <div id="costSummary" class="summary-card hidden">
+                    <h3 style="margin-top: 0; color: #333; border-bottom: 1px solid #ccc; padding-bottom: 10px;">Resumen
+                        de Costos</h3>
+
+                    <div class="summary-row">
+                        <span>Paquete Base:</span>
+                        <span id="displayPackagePrice" style="font-weight: bold;">$0.00</span>
+                    </div>
+
+                    <div class="summary-row">
+                        <span>Traslado:</span>
+                        <span id="displayTransportPrice" style="font-weight: bold;">$0.00</span>
+                    </div>
+
+                    <div class="summary-row total"
+                        style="margin-top: 15px; border-top: 2px solid #333; padding-top: 10px; font-size: 1.2em;">
+                        <strong>Total Estimado:</strong>
+                        <strong id="displayTotal" style="color: #d946ef;">$0.00</strong>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-cancel" onclick="window.history.back()">Volver</button>
+                    <button type="submit" class="btn-submit">Enviar Cotización</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <div class="success-alert-overlay" id="successAlert">
+        <div class="success-alert">
+            <div class="success-icon">
+                <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M20 6L9 17L4 12" stroke="#000" stroke-width="3" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </div>
+            <p class="success-message">¡Éxito!</p>
+            <p class="success-message-detail">Tu solicitud de cotización fue enviada al músico.</p>
+        </div>
+    </div>
+
+    <script src="/Js/FormularioCot.js"></script>
+</body>
+
+</html>

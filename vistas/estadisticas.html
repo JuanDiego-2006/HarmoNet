@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estadísticas | HarmoNet</title>
+    <link rel="stylesheet" href="/estilos/estadisticas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <img src="/Imagenes/logo-harmonet.png" alt="Logo de HarmoNet" class="logo-image">
+            <span>HarmoNet</span>
+        </div>
+        <a href="menuMusico.html" class="btn back-to-profile-btn">Volver al Perfil</a>
+    </header>
+
+    <main class="stats-container">
+        <h1 class="screen-title-main">Estadísticas de Rendimiento</h1>
+
+        <div class="card stats-chart-card" style="border-color: #ff0055;">
+            <h2 class="card-title-main" style="color: #ff0055;">Solicitudes Recibidas</h2>
+            <p class="summary-text">Total histórico: <span id="total-solicitudes">0</span></p>
+
+            <div class="chart-content">
+                <div class="chart-label-top" style="color: #ff0055;">Solicitudes por Mes</div>
+                <div class="chart-grid" id="chart-solicitudes">
+                    </div>
+            </div>
+        </div>
+
+        <div class="card stats-chart-card" style="border-color: #9d00ff; margin-top: 30px;">
+            <h2 class="card-title-main" style="color: #9d00ff;">Contrataciones Confirmadas</h2>
+            <p class="summary-text">Total histórico: <span id="total-contratos">0</span></p>
+
+            <div class="chart-content">
+                <div class="chart-label-top" style="color: #9d00ff;">Eventos por Mes</div>
+                <div class="chart-grid" id="chart-contratos">
+                    </div>
+            </div>
+        </div>
+
+        <div class="card review-card" style="margin-top: 30px;">
+            <h2 class="card-title-main">Opiniones de los clientes</h2>
+            <p class="summary-text">Calificación Promedio</p>
+
+            <div class="rating-summary">
+                <span class="average-rating" id="avg-rating">0.0</span>
+                <div class="star-display" id="stars-container">
+                    </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/Js/estadisticas.js"></script>
+</body>
+</html>
